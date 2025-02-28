@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">La Galleria di Nuria</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylemobile.css?v=1.5">
+  <link rel="stylesheet" href="stylefonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+<body id="index">
+
+
+
+  <!-- Header principale -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="img/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- Selettore lingua per desktop (visibile solo su desktop) -->
+    <div class="language-switcher desktop-language">
+      <button id="current-language">
+        <span id="selected-language">Español</span>
+        <img src="img/freccia-giu.png" class="arrow" alt="Freccia giù">
+      </button>
+      <div class="language-dropdown">
+        <button id="btn-es-desktop" class="language-option" data-lang="es">Español</button>
+        <button id="btn-en-desktop" class="language-option" data-lang="en">English</button>
+        <button id="btn-it-desktop" class="language-option" data-lang="it">Italiano</button>
+      </div>
+    </div>
+
+    <!-- Menu per desktop -->
+    <nav id="computer-menu">
+      <ul>
+        <li><a href="progetti.html" id="nav-progetti">Progetti</a></li>
+        <li><a href="chisono.html" id="nav-chisono">Chi sono</a></li>
+      </ul>
+    </nav>
+
+   <!-- Menu per mobile: il bottone che apre il menu a schermo intero -->
+  <nav id="mobyle-menu">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+    <div class="menu">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <ul>
+        <li><a href="progetti.html" id="nav-progetti">Progetti</a></li>
+        <li><a href="chisono.html" id="nav-chisono">Chi sono</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sezione per la selezione della lingua -->
+  <div class="mobile-language">
+    <button id="language-icon">
+      <img src="img/iconalingua.png" alt="Seleziona lingua">
+    </button>
+    <div class="language-dropdown">
+      <button id="btn-es-mobile" class="language-option" data-lang="es">Español</button>
+      <button id="btn-en-mobile" class="language-option" data-lang="en">English</button>
+      <button id="btn-it-mobile" class="language-option" data-lang="it">Italiano</button>
+    </div>
+  </div>
+</header>
+    <section id="quadro-dettaglio">
+        <img src="img/polignano.jpg" alt="Cuadro 2">
+        <div id="quadro-info">
+            <h2 id="quadro-dettaglio-title">TITOLO DELL'OPERA</h2>
+            <p id="dimensioni"><strong>Dimensioni:</strong> 80x60 cm</p>
+            <p id="descrizione">Descrizione del quadro: Questo quadro rappresenta...</p>
+        </div>
+    </section>
+    
+    <section id="processo-creativo">
+        <h3 id="processo-creativo-title">Processo Creativo</h3>
+        <p id="processo-creativo-descrizione">Ogni quadro nasce da un'idea, un'ispirazione che prende vita attraverso schizzi, colori e pennellate. Ecco alcune immagini del processo creativo:</p>
+        <div class="processo-creativo">
+            <img src="img/processo1.jpg" alt="Fase 1 del processo creativo">
+            <img src="img/processo2.jpg" alt="Fase 2 del processo creativo">
+            <img src="img/processo3.jpg" alt="Fase 3 del processo creativo">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <a href="https://www.instagram.com/nuriapaints" target="_blank" class="footer-link">
+                <i class="fa-brands fa-instagram"></i> @nuriapaints
+            </a>
+            <a href="mailto:nuriapaints@gmail.com" class="footer-link">nuriapaints@gmail.com</a>
+
+            <div class="footer-name-rights">
+                <p class="footer-text footer-name">Nuria García Sáez</p>
+                <p id="footer-text" class="footer-text">&copy; Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

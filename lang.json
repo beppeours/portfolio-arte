@@ -1,0 +1,63 @@
+{
+    "es": {
+      "title": "La Galería de Nuria",
+      "nav_home": "Inicio",
+      "nav_quadri": "Cuadros",
+      "nav_progetti": "Proyectos",
+      "nav_chisono": "Quién soy",
+      "nav_contattami": "Contáctame",
+      "footer_text": "&copy;Todos los derechos reservados.",
+      "section_title": "Mis proyectos artísticos",
+      "section_description": "Aquí puedes insertar descripciones de tus proyectos artísticos.",
+      "paintings_title": "Cuadros",
+      "about_title": "Quién soy",
+      "about_description": "Soy un artista que expresa la belleza a través de la pintura y la escultura. Cada una de mis obras cuenta una historia, una emoción, un momento de vida.",
+      "quadro_dettaglio_title": "TÍTULO DE LA OBRA",
+      "dimensioni": "Dimensiones:",
+      "descrizione": "Descripción de la obra: Esta obra representa...",
+      "processo_creativo": "Proceso Creativo",
+      "processo_descrizione": "Cada obra nace de una idea, una inspiración que cobra vida a través de bocetos, colores y pinceladas."
+
+    },
+    "en": {
+      "title": "Nuria's Gallery",
+      "nav_home": "Home",
+      "nav_quadri": "Paintings",
+      "nav_progetti": "Projects",
+      "nav_chisono": "Who I Am",
+      "nav_contattami": "Contact Me",
+      "footer_text": "&copy;All rights reserved.",
+      "section_title": "My Art Projects",
+      "section_description": "Here you can add descriptions of your art projects.",
+      "paintings_title": "Paintings",
+      "about_title": "Who I Am",
+      "about_description": "I am an artist who expresses beauty through painting and sculpture. Each of my works tells a story, an emotion, a moment in life.",
+      "quadro_dettaglio_title": "TITLE OF THE WORK",
+      "dimensioni": "Dimensions:",
+      "descrizione": "Description of the work: This work represents...",
+      "processo_creativo": "Creative Process",
+      "processo_descrizione": "Each work is born from an idea, an inspiration that comes to life through sketches, colors, and brushstrokes."
+      
+    },
+    "it": {
+      "title": "La Galleria di Nuria",
+      "nav_home": "Home",
+      "nav_quadri": "Quadri",
+      "nav_progetti": "Progetti",
+      "nav_chisono": "Chi sono",
+      "nav_contattami": "Contattami",
+      "footer_text": "&copy;Tutti i diritti riservati.",
+      "section_title": "I miei progetti artistici",
+      "section_description": "Qui puoi inserire descrizioni dei tuoi progetti artistici.",
+      "paintings_title": "Quadri",
+      "about_title": "Chi sono",
+      "about_description": "Sono un artista che esprime la bellezza attraverso la pittura e la scultura. Ogni mia opera racconta una storia, un'emozione, un momento di vita.",
+      "quadro_dettaglio_title": "TITOLO DELL'OPERA",
+      "dimensioni": "Dimensioni:",
+      "descrizione": "Descrizione dell'opera: Questa opera rappresenta...",
+      "processo_creativo": "Processo Creativo",
+      "processo_descrizione": "Ogni opera nasce da un'idea, un'ispirazione che prende vita attraverso schizzi, colori e pennellate."
+      
+    }
+  }
+  

@@ -1,0 +1,42 @@
+
+@font-face {
+    font-family: 'Typewriter Condensed';
+    src: url('fonts/typewcond_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Typewriter Condensed';
+    src: url('fonts/typewcond_bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Typewriter Condensed';
+    src: url('fonts/typewcond_demi.otf') format('opentype');
+    font-weight: 600;  /* Demi bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('fonts/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('fonts/Helvetica-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}

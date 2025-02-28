@@ -1,0 +1,363 @@
+
+@media screen and (max-width: 992px) {
+    /* Nasconde il menu desktop su dispositivi mobili */
+    #computer-menu {
+        display: none;
+    }
+
+    /* Nasconde il selettore di lingua desktop su dispositivi mobili */
+    .desktop-language {
+        display: none;
+    }
+
+    /* Imposta l'altezza del corpo della pagina per adattarsi al contenuto */
+    html, body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /* HEADER PRINCIPALE */
+    header {
+        height: 100px; /* Altezza fissa dell'header */
+        border-bottom: 1px solid #ddd; /* Linea di separazione */
+        display: flex;
+        justify-content: space-between; /* Allinea gli elementi ai lati */
+        align-items: center; /* Centra verticalmente gli elementi */
+        padding: 0 20px; /* Padding laterale */
+        background-color: white; /* Sfondo bianco */
+        position: relative;
+        z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
+        margin-top: 10px; /* Margine superiore */
+    }
+
+    /* Logo a sinistra */
+    .logo-container .logo {
+        width: 80px; /* Larghezza del logo */
+        height: auto; /* Mantiene le proporzioni */
+        margin-left: 5px;
+    }
+
+    /* Contenitore per il bottone menu e lingua */
+    .header-right {
+        display: flex;
+        justify-content: flex-end; /* Allinea gli elementi a destra */
+        align-items: center; /* Centra verticalmente */
+        gap: 5px; /* Spazio tra gli elementi */
+        width: 100%; /* Occupa tutto lo spazio disponibile */
+    }
+
+
+    
+
+/* Sezione lingua mobile */
+.mobile-language {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-left: 0; /* Rimuove il margine sinistro */
+}
+
+/* Bottone lingua */
+#language-icon {
+    background: none; /* Rimuove lo sfondo */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio */
+    padding: 5px; /* Padding per l'interattività */
+    margin-top: -8px; /* Alza il bottone (valore negativo) */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+}
+
+/* Icona della lingua */
+#language-icon img {
+    width: 35px; /* Larghezza dell'icona */
+    height: 35px; /* Altezza dell'icona */
+    display: block; /* Assicura che l'immagine sia visibile */
+ 
+}
+
+/* Dropdown della lingua */
+.language-dropdown {
+    display: none; /* Inizialmente nascosto */
+    position: absolute; /* Posizionamento assoluto */
+    top: 110%; /* Posizione rispetto al bottone */
+    right: -130px; /* Sposta il menu leggermente a destra */
+    background-color: white; /* Sfondo bianco */
+    z-index: 10; /* Sovrapposizione */
+    min-width: 20px; /* Larghezza minima */
+    border: none; /* Rimuove il bordo */
+    padding: 0; /* Rimuove il padding predefinito */
+}
+
+/* Stile del menu lingua */
+.language-dropdown button {
+    padding: 8px 16px; /* Padding interno (più spazio a destra) */
+    width: 100%; /* Larghezza piena */
+    font-family: 'Montserrat', sans-serif; /* Font */
+    font-size: 18px; /* Dimensione del testo leggermente più grande */
+    text-align: left; /* Allinea il testo a sinistra */
+    background: none; /* Rimuove lo sfondo */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio */
+    color: black; /* Colore del testo */
+    transition: background-color 0.3s ease; /* Transizione per l'hover */
+}
+
+/* Hover sulle voci del menu */
+.language-dropdown button:hover {
+    background-color: #f0f0f0; /* Sfondo leggermente grigio al passaggio */
+}
+
+    /* Bottone del menu */
+    #mobyle-menu .menu-btn {
+        background: none; /* Rimuove lo sfondo */
+        border: none; /* Rimuove il bordo */
+        color: black; /* Colore del testo */
+        font-size: 50px; /* Dimensione del testo */
+        cursor: pointer; /* Cambia il cursore al passaggio */
+        padding: 5px; /* Padding per l'interattività */
+        margin: 0; /* Rimuove i margini */
+        position: absolute; /* Posiziona il bottone in modo assoluto */
+        right: 80px; /* Distanza dal bordo destro */
+        top: 46%; /* Centra verticalmente */
+        transform: translateY(-50%); /* Compensa per il centramento */ 
+    }
+
+    /* Menu a schermo intero */
+    #mobyle-menu .menu {
+        position: fixed; /* Posizionamento fisso */
+        top: 0; /* In alto */
+        left: 0; /* A sinistra */
+        width: 100%; /* Larghezza piena */
+        height: 100%; /* Altezza piena */
+        background: rgba(0, 0, 0, 0.9); /* Sfondo semi-trasparente */
+        display: flex;
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-direction: column; /* Disposizione in colonna */
+        opacity: 0; /* Inizialmente invisibile */
+        visibility: hidden; /* Inizialmente nascosto */
+        transition: opacity 0.3s ease, visibility 0.3s ease; /* Transizione */
+        z-index: 1200; /* Sovrapposizione */
+    }
+
+    /* Menu aperto */
+    #mobyle-menu .menu.open {
+        opacity: 1; /* Visibile */
+        visibility: visible; /* Visibile */
+    }
+
+    /* Bottone per chiudere il menu */
+    #mobyle-menu .close-btn {
+        position: absolute; /* Posizionamento assoluto */
+        top: 20px; /* Distanza dal bordo superiore */
+        right: 20px; /* Distanza dal bordo destro */
+        font-size: 70px; /* Dimensione del testo */
+        background: none; /* Rimuove lo sfondo */
+        border: none; /* Rimuove il bordo */
+        color: white; /* Colore del testo */
+        cursor: pointer; /* Cambia il cursore al passaggio */
+        z-index: 1300; /* Sovrapposizione */
+    }
+
+    /* Lista del menu */
+    #mobyle-menu .menu ul {
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        gap: 80px; /* Spazio tra gli elementi */
+    }
+
+    /* Link del menu */
+    #mobyle-menu .menu a {
+        color: white; /* Colore del testo */
+        font-size: 32px; /* Dimensione del testo */
+        text-decoration: none; /* Rimuove la sottolineatura */
+        transition: color 0.3s; /* Transizione del colore */
+    }
+
+    /* Hover sui link del menu */
+    #mobyle-menu .menu a:hover {
+        color: #2c6fad; /* Cambia colore al passaggio */
+    }
+
+    /* SLIDESHOW: Centrare le immagini */
+    .slideshow {
+        height: 240px; /* Altezza fissa */
+        display: flex;
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+        width: 100%; /* Larghezza piena */
+        overflow: hidden; /* Nasconde il contenuto fuori dai bordi */
+    }
+
+    /* Immagini dentro lo slideshow */
+    .slideshow img {
+        max-width: 90%; /* Larghezza massima */
+        height: auto; /* Mantiene le proporzioni */
+        display: block; /* Rimuove spazi extra */
+        margin-left: -5%; /* Sposta leggermente a sinistra */
+    }
+
+    /* Sezione home */
+    #home {
+        flex: 1; /* Occupa tutto lo spazio disponibile */
+    }
+
+    /* Sezione quadri */
+    #quadri {
+        min-height: 100vh; /* Altezza minima */
+        overflow-y: auto; /* Scrolling verticale se necessario */
+        overflow-x: hidden; /* Nasconde lo scrolling orizzontale */
+        padding: 20px; /* Padding interno */
+        box-sizing: border-box; /* Include padding nella larghezza */
+    }
+
+    /* GALLERIA: Immagini in colonna */
+    .gallery {
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        gap: 20px; /* Spazio tra le immagini */
+    }
+
+    /* Immagini nella gallery */
+    .gallery img {
+        width: 80%; /* Larghezza relativa */
+        max-width: 400px; /* Larghezza massima */
+        height: auto; /* Mantiene le proporzioni */
+    }
+
+    /* Sezione quadro1 */
+    #quadro1 {
+        overflow-y: auto; /* Scrolling verticale se necessario */
+        overflow-x: hidden; /* Nasconde lo scrolling orizzontale */
+        width: 100vw; /* Larghezza piena */
+        height: auto; /* Altezza automatica */
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    /* Elementi dentro quadro1 */
+    #quadro1 * {
+        max-width: 100%; /* Larghezza massima */
+        box-sizing: border-box; /* Include padding nella larghezza */
+    }
+
+    /* Header dentro quadro1 */
+    #quadro1 header {
+        width: 100vw; /* Larghezza piena */
+    }
+
+    /* Sezione quadro2 */
+    #quadro2 {
+        overflow-y: auto; /* Scrolling verticale se necessario */
+        overflow-x: hidden; /* Nasconde lo scrolling orizzontale */
+        width: 100vw; /* Larghezza piena */
+        height: auto; /* Altezza automatica */
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    /* Elementi dentro quadro2 */
+    #quadro2 * {
+        max-width: 100%; /* Larghezza massima */
+        box-sizing: border-box; /* Include padding nella larghezza */
+    }
+
+    /* Header dentro quadro2 */
+    #quadro2 header {
+        width: 100vw; /* Larghezza piena */
+    }
+
+    /* Sezione quadro3 */
+    #quadro3 {
+        overflow-y: auto; /* Scrolling verticale se necessario */
+        overflow-x: hidden; /* Nasconde lo scrolling orizzontale */
+        width: 100vw; /* Larghezza piena */
+        height: auto; /* Altezza automatica */
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    /* Elementi dentro quadro3 */
+    #quadro3 * {
+        max-width: 100%; /* Larghezza massima */
+        box-sizing: border-box; /* Include padding nella larghezza */
+    }
+
+    /* Header dentro quadro3 */
+    #quadro3 header {
+        width: 100vw; /* Larghezza piena */
+    }
+
+    /* Sezione processo creativo */
+    #processo-creativo {
+        max-width: 90%; /* Larghezza massima */
+        margin: 20px auto; /* Centra la sezione */
+        padding: 20px; /* Padding interno */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    /* Titolo processo creativo */
+    #processo-creativo-title {
+        font-size: 22px; /* Dimensione del testo */
+    }
+
+    /* Descrizione processo creativo */
+    #processo-creativo-descrizione {
+        font-size: 16px; /* Dimensione del testo */
+        line-height: 1.5; /* Altezza della linea */
+        margin-bottom: 15px; /* Margine inferiore */
+    }
+
+    /* Contenitore processo creativo */
+    .processo-creativo {
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: center; /* Centra gli elementi */
+        gap: 10px; /* Spazio tra le immagini */
+    }
+
+    /* Immagini processo creativo */
+    .processo-creativo img {
+        width: 90%; /* Larghezza relativa */
+        max-width: 300px; /* Larghezza massima */
+        border-radius: 5px; /* Angoli arrotondati */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombra */
+    }
+
+    /* FOOTER: Allineare a sinistra e mantenere in colonna */
+    .footer-content {
+        text-align: left; /* Allinea il testo a sinistra */
+        display: flex;
+        flex-direction: column; /* Disposizione in colonna */
+        align-items: flex-start; /* Allinea gli elementi a sinistra */
+        gap: 5px; /* Spazio tra gli elementi */
+        font-size: 10px; /* Dimensione del testo */
+    }
+
+    /* Icone nel footer */
+    .footer-link i {
+        font-size: 12px; /* Dimensione del testo */
+        margin-right: 5px; /* Margine destro */
+        color: black; /* Colore del testo */
+    }
+
+    /* Ultimo link nel footer */
+    .footer-link:last-of-type {
+        margin-bottom: 5px; /* Margine inferiore */
+    }
+}

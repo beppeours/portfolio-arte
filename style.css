@@ -1,0 +1,444 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+   
+
+
+body {
+    display: flex;  /* Utilizza flexbox per organizzare gli elementi */
+    flex-direction: column;  /* Dispone gli elementi in colonna */
+}
+
+
+/* Nasconde il menu mobile su desktop */
+@media screen and (min-width: 992px) {
+    #mobyle-menu {
+        display: none;
+    }
+
+   /* Secondo header per il selettore lingua mobile (nascosto di default) */
+#mobile-header {
+    display: none;
+  } 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Occupa tutta l'altezza della viewport */
+    overflow: hidden; /* Previene lo scroll nei browser che ignorano JS inizialmente */
+}
+
+
+.main {
+    flex: 1; /* Occupa lo spazio tra header e footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white ;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white ;
+}
+
+  /* Header */
+
+  header {
+    background-color: white; /* Colore di sfondo dell'header */
+    color: black; /* Colore del testo */
+    display: flex; /* Usa Flexbox per organizzare gli elementi */
+    align-items: center; /* Allinea gli elementi verticalmente al centro */
+    justify-content: space-between; /* Distribuisce gli elementi: logo a sinistra, bottoni a destra */
+    padding: 20px 30px; /* Aggiunge spazio intorno agli elementi */
+    position: relative; /* Necessario per posizionare il menu al centro con 'absolute' */
+    height: 100px; /* Aumenta l'altezza dell'header  */
+    border-bottom: 1px solid #ddd; /* Aggiungi un bordo sottile  */
+}
+
+.logo-container .logo {
+    width: 90px; /* Imposta la larghezza del logo */
+    height: auto; /* Mantiene le proporzioni */
+    margin-left: 40px; /* Aggiungi un margine a sinistra per spostare il logo a destra */
+    border: 1px solid #ddd; /* Aggiungi un bordo leggero (2px di spessore, colore semi-trasparente) */
+    border-radius: 50%; /* Rende il bordo tondo come il logo */
+}  
+
+
+                      /* Menu di navigazione per computer */
+
+#computer-menu {
+    position: absolute; /* Posiziona il menu rispetto all'header */
+    left: 50%; /* Sposta il menu al centro */
+    transform: translateX(-50%); /* Lo riporta indietro della metà della sua larghezza per centrarlo */
+}
+
+#computer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+#computer-menu ul li a {
+    color: black;
+    font-family: 'Montserrat', sans-serif;  /* Usa Montserrat come font principale */
+    text-decoration: none;
+    font-size: 19px;
+    padding: 5px 10px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+#computer-menu ul li a:hover {
+    color: #2c6fad;
+}
+
+
+
+
+                            /* bottone e menu lingua */
+
+.mobile-language {
+display: none;
+}                          
+
+/* Stile per il bottone con la lingua selezionata */
+#current-language {
+    background-color: white; /* Sfondo bianco */
+    color: black; /* Testo nero */
+    border: none; /* Nessun bordo */
+    font-size: 18px; /* Dimensione del testo */
+    font-family: 'Montserrat', sans-serif;  /* Usa Montserrat come font principale */
+    padding: 8px 12px; /* Spazio interno */
+    cursor: pointer; /* Mostra il cursore a mano */
+    display: inline-flex; /* Allinea il testo e la freccia orizzontalmente */
+    align-items: center; /* Centra il testo e la freccia verticalmente */
+    margin-right: 20px; /* Regola la distanza dal bordo destro */
+}
+
+/* Freccia accanto alla lingua */
+#current-language .arrow {
+    width: 12px;  /* Regola la dimensione della freccia */
+    height: auto;
+    vertical-align: middle; /* Allinea la freccia con il testo */
+    margin-left: 5px; /* Distanza tra testo e freccia */
+    content: url("img/freccia-giu.png"); /* Mantiene sempre la stessa immagine */
+    width: 12px; 
+}
+
+.desktop-language .language-switcher {
+    position: relative;
+}
+
+/* Nascondi la dropdown per default */
+.desktop-language .language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+}
+
+/* Pulsanti all'interno del dropdown: scritta nera e senza bordi */
+.desktop-language .language-dropdown button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: transparent; /* Nessun background */
+    color: black; /* Colore del testo nero */
+    border: none; /* Nessun bordo */
+    font-size: 16px; /* Impostazione della dimensione del testo */
+}
+
+
+/* Cambia il cursore su pointer al passaggio del mouse */
+.desktop-language .language-dropdown button:hover {
+    background-color: transparent; /* Nessun colore di sfondo */
+}
+
+/* Menu a tendina, senza bordi, solo cambio del cursore */
+.desktop-language .language-dropdown button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: transparent; /* Nessun colore di sfondo */
+    color: black; /* Colore del testo */
+    font-family: 'Montserrat', sans-serif;  /* Usa Montserrat come font principale */
+    border: none; /* Nessun bordo */
+    font-size: 18px; /* Impostazione della dimensione del testo */
+}
+
+/* Cambia il cursore su pointer quando si passa sopra gli elementi del dropdown */
+.desktop-language .language-dropdown button:hover {
+    background-color: transparent; /* Nessun colore di sfondo */
+    color: #2c6fad;
+}
+
+/* Mostra il dropdown quando il menu viene hoverato */
+.desktop-language:hover .language-dropdown {
+    display: block;
+}
+
+
+
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow-y: auto; /* Permette lo scroll verticale */
+    overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    font-family: 'Montserrat', sans-serif;  /* Usa Montserrat come font principale */
+    font-weight: 400;  /* Imposta il peso a 400 per la versione Regular */
+    text-align: left;  /* Allinea il testo del footer a sinistra */
+    padding: 20px;  /* Aggiunge 20px di spazio interno al footer */
+    background-color: white;  /* Imposta il colore di sfondo del footer trasparente */
+    color: black;  /* Imposta il colore del testo in nero */
+    margin-top: auto;  /* Posiziona il footer in basso */
+    border-top: 1px solid whitesmoke;  /* Aggiunge una riga sottile e leggera sopra il footer */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-link {
+    color: black;  /* Cambia il colore del link in nero */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.footer-link i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: black;  /* Cambia il colore dell'icona in nero */
+}
+
+.footer-link:last-of-type {
+    margin-bottom: 15px;
+}
+
+.footer-name-rights {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+
+
+#contattami {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#home {
+    width: 100%;
+    height: 100vh; /* Occupa l'intera altezza della viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.slideshow {
+    position: relative;
+    width: 90%;  /* Rendi la slideshow piena larghezza */
+    max-width: 800px;  /* Limita la larghezza massima a 900px */
+    height: 350px;  /* Imposta un'altezza fissa */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -4%;
+}
+
+.slideshow a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambia da cover a contain per evitare lo zoom */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    left: 50%;  /* Centra ogni immagine */
+    transform: translateX(-50%);  /* Allinea le immagini al centro */
+}
+
+.slideshow .slide.active {
+    opacity: 1;
+}
+
+
+#quadri {
+    overflow-y: auto; /* Attiva lo scrolling se necessario */
+    overflow-x: hidden;
+}
+
+#quadri .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white ;
+}
+
+#quadri .gallery img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#quadri .gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#quadro-dettaglio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white ;
+}
+
+#quadro-dettaglio img {
+    width: 50%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+#quadro-info {
+    flex: 1;
+}
+
+#quadro-info h2 {
+    margin-bottom: 10px;
+}
+
+#quadro-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+#processo-creativo {
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.processo-creativo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.processo-creativo img {
+    width: 30%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon {
+    width: 60px;
+    height: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
